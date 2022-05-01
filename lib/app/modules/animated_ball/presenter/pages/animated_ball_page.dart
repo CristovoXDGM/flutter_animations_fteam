@@ -12,6 +12,10 @@ class _AnimatedBallPageState extends State<AnimatedBallPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.play_arrow),
+      ),
     );
   }
 }

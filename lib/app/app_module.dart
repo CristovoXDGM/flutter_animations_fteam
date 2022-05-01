@@ -1,4 +1,7 @@
 import 'package:flutter_animations_fteam/app/modules/animated_ball/presenter/pages/animated_ball_page.dart';
+import 'package:flutter_animations_fteam/app/modules/animated_ball/presenter/pages/hero_page.dart';
+import 'package:flutter_animations_fteam/app/modules/animated_ball/presenter/pages/home_page.dart';
+import 'package:flutter_animations_fteam/app/modules/animated_ball/presenter/pages/implicit_animation_page.dart';
 import 'package:flutter_animations_fteam/app/shared/constants/app_routes.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -11,6 +14,18 @@ class AppModule extends Module {
         ChildRoute(
           AppRoutes.animatedBallPage,
           child: (context, args) => const AnimatedBallPage(),
-        )
+        ),
+        ChildRoute(
+          AppRoutes.heroPage,
+          child: (context, args) => const HeroPage(),
+        ),
+        ChildRoute(
+          AppRoutes.home,
+          child: (context, args) => const HomePage(),
+        ),
+        ChildRoute(
+          AppRoutes.implicitAnimationPage,
+          child: (context, args) => const ImplicitAnimationPAge(),
+        ),
       ];
 }
