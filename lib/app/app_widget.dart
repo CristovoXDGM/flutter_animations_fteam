@@ -9,6 +9,14 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Modular.setInitialRoute(AppRoutes.home);
     return MaterialApp.router(
+        themeMode: ThemeMode.dark,
+        theme: ThemeData.dark().copyWith(
+          colorScheme: const ColorScheme.dark().copyWith(
+            primary: const Color(0xff4F1F4D),
+            secondary: const Color(0xff9180A7),
+            background: const Color(0xff202020),
+          ),
+        ),
         routeInformationParser: Modular.routeInformationParser,
         routerDelegate: Modular.routerDelegate);
   }

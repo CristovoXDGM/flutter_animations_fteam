@@ -35,7 +35,10 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Modular.to.pushNamed(AppRoutes.implicitAnimationPage);
                   },
-                  child: const Text("Animações implicitas"),
+                  child: const Text(
+                    "Animações implicitas",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
               const SizedBox(
@@ -47,7 +50,10 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Modular.to.pushNamed(AppRoutes.animatedBallPage);
                   },
-                  child: const Text("Animações Explicitas"),
+                  child: const Text(
+                    "Animações Explicitas",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
               const SizedBox(
