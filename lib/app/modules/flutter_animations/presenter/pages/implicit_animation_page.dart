@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animations_fteam/app/modules/animated_ball/presenter/components/animated_container_example.dart';
-import 'package:flutter_animations_fteam/app/modules/animated_ball/presenter/components/animated_crossfade_example.dart';
-import 'package:flutter_animations_fteam/app/modules/animated_ball/presenter/components/animated_opacity_example.dart';
+import 'package:flutter_animations_fteam/app/modules/flutter_animations/presenter/components/animated_align_example.dart';
+import 'package:flutter_animations_fteam/app/modules/flutter_animations/presenter/components/animated_container_example.dart';
+import 'package:flutter_animations_fteam/app/modules/flutter_animations/presenter/components/animated_crossfade_example.dart';
+import 'package:flutter_animations_fteam/app/modules/flutter_animations/presenter/components/animated_opacity_example.dart';
 
 class ImplicitAnimationPAge extends StatefulWidget {
   const ImplicitAnimationPAge({Key? key}) : super(key: key);
@@ -15,6 +16,8 @@ class _ImplicitAnimationPAgeState extends State<ImplicitAnimationPAge> {
   late Color boxColor = Colors.amber;
   late CrossFadeState crossFadeState = CrossFadeState.showFirst;
   late bool isCircleVisible = false;
+  late bool isBallAligned = false;
+
   final title = 'Animações implicitas';
 
   void changeCubeSize() {
@@ -24,6 +27,12 @@ class _ImplicitAnimationPAgeState extends State<ImplicitAnimationPAge> {
   void changeCircleOpacity() {
     setState(() {
       isCircleVisible = !isCircleVisible;
+    });
+  }
+
+  void changeBallState() {
+    setState(() {
+      isBallAligned = !isBallAligned;
     });
   }
 
@@ -39,6 +48,7 @@ class _ImplicitAnimationPAgeState extends State<ImplicitAnimationPAge> {
     changeCrossFadeState();
     changeCubeSize();
     changeCircleOpacity();
+    changeBallState();
   }
 
   @override
@@ -57,7 +67,7 @@ class _ImplicitAnimationPAgeState extends State<ImplicitAnimationPAge> {
         mainAxisSize: MainAxisSize.min,
         children: [
           const SizedBox(
-            height: 20,
+            height: 80,
           ),
           AnimatedContainerExample(
             valueListenable: cubeWidthhSize,
@@ -71,7 +81,13 @@ class _ImplicitAnimationPAgeState extends State<ImplicitAnimationPAge> {
           const SizedBox(
             height: 20,
           ),
-          AnimatedCrossFadeExample(crossFadeState: crossFadeState)
+          AnimatedCrossFadeExample(crossFadeState: crossFadeState),
+          const SizedBox(
+            height: 20,
+          ),
+          AnimatedAlignExample(
+            isBallAligned: isBallAligned,
+          )
         ],
       ),
     );

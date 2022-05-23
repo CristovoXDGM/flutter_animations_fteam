@@ -29,7 +29,7 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
           width: 200,
           color: Colors.red,
         ),
-        firstCurve: Curves.easeIn,
+        firstCurve: Curves.easeInBack,
         secondCurve: Curves.easeIn,
         sizeCurve: Curves.bounceOut,
         reverseDuration: defaultCrossfadeDuration,
