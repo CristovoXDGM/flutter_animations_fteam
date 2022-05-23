@@ -11,21 +11,18 @@ class AppModule extends Module {
 
   @override
   List<ModularRoute> get routes => [
-        ChildRoute(
-          AppRoutes.animatedBallPage,
-          child: (context, args) => const AnimatedBallPage(),
-        ),
+        ChildRoute(AppRoutes.animatedBallPage,
+            child: (context, args) => const AnimatedBallPage(),
+            transition: TransitionType.leftToRight),
         ChildRoute(
           AppRoutes.heroPage,
           child: (context, args) => const HeroPage(),
         ),
-        ChildRoute(
-          AppRoutes.home,
-          child: (context, args) => const HomePage(),
-        ),
-        ChildRoute(
-          AppRoutes.implicitAnimationPage,
-          child: (context, args) => const ImplicitAnimationPAge(),
-        ),
+        ChildRoute(AppRoutes.home,
+            child: (context, args) => const HomePage(),
+            transition: TransitionType.leftToRight),
+        ChildRoute(AppRoutes.implicitAnimationPage,
+            child: (context, args) => const ImplicitAnimationPAge(),
+            transition: TransitionType.leftToRight),
       ];
 }

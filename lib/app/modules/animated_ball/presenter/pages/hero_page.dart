@@ -12,14 +12,14 @@ class _HeroPageState extends State<HeroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: const Hero(
-          tag: "flutter-logo",
-          child: Center(
+        appBar: AppBar(),
+        body: const Center(
+          child: Hero(
+            tag: 'flutter-logo',
             child: FlutterLogo(
               size: 80,
             ),
-          )),
-    );
+          ),
+        ));
   }
 }
