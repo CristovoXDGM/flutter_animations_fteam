@@ -14,7 +14,7 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-      margin: EdgeInsets.symmetric(horizontal: 130, vertical: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 130, vertical: 20),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
           border: Border.all(
@@ -30,7 +30,11 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
           child: Container(
             height: 40,
             width: 40,
-            color: Colors.blue,
+            child: Center(
+              child: Icon(
+                  widget.isBallAligned ? Icons.add : Icons.minimize_rounded),
+            ),
+            color: widget.isBallAligned ? Colors.blue : Colors.red,
           ),
         ),
       ),

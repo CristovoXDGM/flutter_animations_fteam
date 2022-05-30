@@ -12,14 +12,32 @@ class _HeroPageState extends State<HeroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        body: const Center(
-          child: Hero(
-            tag: 'flutter-logo',
-            child: FlutterLogo(
-              size: 80,
-            ),
+      appBar: AppBar(
+        title: const Text("Exemplo Hero"),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              Hero(
+                tag: 'flutter-logo',
+                child: Image.asset(
+                  'assets/images/trees.jpeg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              const Text(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam massa et ac id lectus elit vel placerat. Magna varius magna diam nunc, iaculis. ",
+                textAlign: TextAlign.justify,
+              )
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
