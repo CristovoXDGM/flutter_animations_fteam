@@ -70,37 +70,35 @@ class _HomePageState extends State<HomePage> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 20),
-                      child: Expanded(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const SizedBox(
-                              height: 30,
-                            ),
-                            Hero(
-                              tag: 'flutter-logo',
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image.asset(
-                                  'assets/images/trees.jpeg',
-                                  fit: BoxFit.cover,
-                                ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Hero(
+                            tag: 'flutter-logo',
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                'assets/images/trees.jpeg',
+                                fit: BoxFit.cover,
                               ),
                             ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            const Text(
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam massa et ac id lectus elit vel placerat. Magna varius magna diam nunc, iaculis. ",
-                              textAlign: TextAlign.justify,
-                            )
-                          ],
-                        ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          const Text(
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam massa et ac id lectus elit vel placerat. Magna varius magna diam nunc, iaculis. ",
+                            textAlign: TextAlign.justify,
+                          )
+                        ],
                       ),
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

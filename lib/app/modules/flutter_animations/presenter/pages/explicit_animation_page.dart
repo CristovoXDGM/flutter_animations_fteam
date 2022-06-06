@@ -8,9 +8,7 @@ class ExplicitAnimationPage extends StatefulWidget {
 }
 
 class _ExplicitAnimationPageState extends State<ExplicitAnimationPage>
-    with TickerProviderStateMixin {
-  bool animateBall = false;
-
+    with SingleTickerProviderStateMixin {
   final title = 'Animações explicitas';
   late final AnimationController _animationController = AnimationController(
     duration: const Duration(seconds: 3),
