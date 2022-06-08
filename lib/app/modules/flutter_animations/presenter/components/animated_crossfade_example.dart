@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class AnimatedCrossFadeExample extends StatefulWidget {
   const AnimatedCrossFadeExample({
     Key? key,
-    // required this.crossFadeState,
+    required this.crossFadeState,
   }) : super(key: key);
-  // final CrossFadeState crossFadeState;
+  final CrossFadeState crossFadeState;
 
   @override
   State<AnimatedCrossFadeExample> createState() =>
@@ -13,31 +13,31 @@ class AnimatedCrossFadeExample extends StatefulWidget {
 }
 
 class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
-  // final Duration defaultCrossfadeDuration = const Duration(seconds: 2);
+  final Duration defaultCrossfadeDuration = const Duration(seconds: 2);
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-        // child: AnimatedCrossFade(
-        //   crossFadeState: widget.crossFadeState,
-        //   duration: defaultCrossfadeDuration,
-        //   firstChild: AnimatedContainer(
-        //     duration: defaultCrossfadeDuration,
-        //     height: 100,
-        //     width: 100,
-        //     color: Colors.blue,
-        //   ),
-        //   secondChild: AnimatedContainer(
-        //     duration: defaultCrossfadeDuration,
-        //     height: 100,
-        //     width: 200,
-        //     color: Colors.red,
-        //   ),
-        //   firstCurve: Curves.easeInBack,
-        //   secondCurve: Curves.easeIn,
-        //   sizeCurve: Curves.bounceOut,
-        //   reverseDuration: defaultCrossfadeDuration,
-        // ),
-        );
+    return Center(
+      child: AnimatedCrossFade(
+        crossFadeState: widget.crossFadeState,
+        duration: defaultCrossfadeDuration,
+        firstChild: AnimatedContainer(
+          duration: defaultCrossfadeDuration,
+          height: 100,
+          width: 100,
+          color: Colors.blue,
+        ),
+        secondChild: AnimatedContainer(
+          duration: defaultCrossfadeDuration,
+          height: 100,
+          width: 200,
+          color: Colors.red,
+        ),
+        firstCurve: Curves.easeInBack,
+        secondCurve: Curves.easeIn,
+        sizeCurve: Curves.bounceOut,
+        reverseDuration: defaultCrossfadeDuration,
+      ),
+    );
   }
 }

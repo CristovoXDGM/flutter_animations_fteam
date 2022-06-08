@@ -18,21 +18,21 @@ class _HeroPageState extends State<HeroPage> {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
-            children: const [
-              // Hero(
-              //   tag: 'flutter-logo',
-              //   child: Image.asset(
-              //     'assets/images/trees.jpeg',
-              //     fit: BoxFit.cover,
-              //   ),
-              // ),
-              SizedBox(
+            children: [
+              Hero(
+                tag: 'flutter-logo',
+                child: Image.asset(
+                  'assets/images/trees.jpeg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(
                 height: 15,
               ),
-              // const Text(
-              //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam massa et ac id lectus elit vel placerat. Magna varius magna diam nunc, iaculis. ",
-              //   textAlign: TextAlign.justify,
-              // )
+              const Text(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam massa et ac id lectus elit vel placerat. Magna varius magna diam nunc, iaculis. ",
+                textAlign: TextAlign.justify,
+              )
             ],
           ),
         ),
