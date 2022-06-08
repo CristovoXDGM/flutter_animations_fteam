@@ -19,45 +19,46 @@ class _ImplicitAnimationPAgeState extends State<ImplicitAnimationPAge> {
   late bool isBallAligned = false;
 
   final title = 'Animações implicitas';
+  // #1
+  // void changeCubeSize() {
+  //   cubeWidthhSize.value = !cubeWidthhSize.value;
+  // }
 
-  void changeCubeSize() {
-    cubeWidthhSize.value = !cubeWidthhSize.value;
-  }
+  // void changeCircleOpacity() {
+  //   setState(() {
+  //     isCircleVisible = !isCircleVisible;
+  //   });
+  // }
 
-  void changeCircleOpacity() {
-    setState(() {
-      isCircleVisible = !isCircleVisible;
-    });
-  }
+  // void changeBallState() {
+  //   setState(() {
+  //     isBallAligned = !isBallAligned;
+  //   });
+  // }
 
-  void changeBallState() {
-    setState(() {
-      isBallAligned = !isBallAligned;
-    });
-  }
+  // void changeCrossFadeState() {
+  //   setState(() {
+  //     crossFadeState = crossFadeState == CrossFadeState.showFirst
+  //         ? CrossFadeState.showSecond
+  //         : CrossFadeState.showFirst;
+  //   });
+  // }
 
-  void changeCrossFadeState() {
-    setState(() {
-      crossFadeState = crossFadeState == CrossFadeState.showFirst
-          ? CrossFadeState.showSecond
-          : CrossFadeState.showFirst;
-    });
-  }
-
-  void callAllAnimations() {
-    changeCrossFadeState();
-    changeCubeSize();
-    changeCircleOpacity();
-    changeBallState();
-  }
+  // void callAllAnimations() {
+  //   changeCrossFadeState();
+  //   changeCubeSize();
+  //   changeCircleOpacity();
+  //   changeBallState();
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.play_arrow),
-        onPressed: callAllAnimations,
-      ),
+      // #2
+      // floatingActionButton: FloatingActionButton(
+      //   child: const Icon(Icons.play_arrow),
+      //   onPressed: callAllAnimations,
+      // ),
       appBar: AppBar(
         centerTitle: true,
         title: Text(title),
@@ -65,29 +66,29 @@ class _ImplicitAnimationPAgeState extends State<ImplicitAnimationPAge> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: [
-          const SizedBox(
+        children: const [
+          SizedBox(
             height: 80,
           ),
-          AnimatedContainerExample(
-            valueListenable: cubeWidthhSize,
-          ),
-          const SizedBox(
+          // AnimatedContainerExample(
+          //   valueListenable: cubeWidthhSize,
+          // ),
+          SizedBox(
             height: 20,
           ),
-          AnimatedOpacityExample(
-            opacity: isCircleVisible ? 1 : 0,
-          ),
-          const SizedBox(
+          // AnimatedOpacityExample(
+          //   opacity: isCircleVisible ? 1 : 0,
+          // ),
+          SizedBox(
             height: 20,
           ),
-          AnimatedCrossFadeExample(crossFadeState: crossFadeState),
-          const SizedBox(
+          // AnimatedCrossFadeExample(crossFadeState: crossFadeState),
+          SizedBox(
             height: 20,
           ),
-          AnimatedAlignExample(
-            isBallAligned: isBallAligned,
-          )
+          // AnimatedAlignExample(
+          //   isBallAligned: isBallAligned,
+          // )
         ],
       ),
     );
