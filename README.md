@@ -2,9 +2,11 @@
 
 Flutter project, focused on teach about animations using flutter.
 
-<img height='180' src='./assets/images/KiuStudios/image 19.png'/>
-<img height='180' src='./assets/images/KiuStudios/image 20.png'/>
-<img height='180' src='./assets/images/KiuStudios/image 21.png'/>
+<div style={{display:flex; flex-direction:row;}}>
+<img   src='./assets/images/KiuStudios/image 19.png'/>
+<img   src='./assets/images/KiuStudios/image 20.png'/>
+<img   src='./assets/images/KiuStudios/image 21.png'/>
+</div>
 
 ## What this repo have ?
 
